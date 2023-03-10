@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Token Swap - ōFuel Rocket Lounge</title>
+    <link rel="stylesheet" href="tokenswap.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Token Swap</h1>
+    </header>
+    <main>
+      <form>
+        <div class="input-group">
+          <label for="fromAmount">ETH Amount</label>
+          <input type="number" step="0.01" min="0" id="fromAmount" required />
+        </div>
+        <div class="input-group">
+          <label for="toAmount">ōFuel Amount</label>
+          <input type="number" step="0.01" min="0" id="toAmount" disabled />
+        </div>
+        <button type="submit">Swap Tokens</button>
+      </form>
+      <div class="exchange-rate">1 ETH = <span class="value"></span> ōFuel</div>
+      <div class="swap-summary">
+        <div>Swap Summary:</div>
+        <div><span class="from-amount"></span></div>
+        <div><span class="to-amount"></span></div>
+        <div class="success-message"></div>
+      </div>
+    </main>
+    <script type="module" src="TokenSwap.js"></script>
+  </body>
+</html>

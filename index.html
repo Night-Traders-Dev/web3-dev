@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ōCash Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ōCash Marketplace</h1>
+    <button class="create-nft-button">Create NFT</button>
+  </header>
+  <main>
+    <section class="create-nft-section hidden">
+      <h2>Create NFT</h2>
+      <form class="create-nft-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <label for="imageURL">Image URL:</label>
+        <input type="url" id="imageURL" name="imageURL" required>
+        <label for="price">Price (in ETH):</label>
+        <input type="number" id="price" name="price" step="0.0001" min="0" required>
+        <button type="submit">Create</button>
+      </form>
+    </section>
+    <section class="cards-section">
+      <h2>NFTs for Sale</h2>
+      <div class="cards-container"></div>
+    </section>
+  </main>
+  <script src="web3.js"></script>
+  <script src="contract.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
